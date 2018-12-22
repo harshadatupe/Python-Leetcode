@@ -1,9 +1,5 @@
-# finding a pair in an array who's addition is a given number
-
-# basic approach: Time Complexity: O(n^2), Space Complexity: O(n)
-nums = [1,2,3,4,5]
-target = 6
-def twoSum(self, nums, target):
+class Solution(object):
+    def twoSum(self, nums, target):
         """
         :type nums: List[int]
         :type target: int
@@ -19,5 +15,6 @@ def twoSum(self, nums, target):
                     return (i,j)
                 j=j+1
             i=i+1
+        return i,j 
             
 

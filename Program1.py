@@ -1,3 +1,4 @@
+# finding a pair in an array who's addition is a given number
 arr = [1,2,3,4,5]
 addn = 6
 for index,item in enumerate(arr):

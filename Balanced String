@@ -1,0 +1,24 @@
+left_par = '(,[,{'
+right_par = '),},]'
+right_to_left = {
+  ')' : '(',
+  '}' : '{',
+  ']' : '['
+}
+str = '((())){}[]'
+stack = []
+flag=True
+for char in str:
+  if char in left_par:
+    stack.append(char)
+  elif char in right_par:
+    if not stack or stack.pop() != right_to_left[char]:
+      flag = False
+      
+if stack:
+  flag = False
+
+if flag == False:
+  print ("not balanced")
+else:
+  print ("balanced")
